@@ -1,5 +1,5 @@
 <?php
-Usage: your_docker.sh run <image> <command> <arg1> <arg2> ...
+// Usage: your_docker.sh run <image> <command> <arg1> <arg2> ...
 
 // Disable output buffering.
 while (ob_get_level() !== 0) {
