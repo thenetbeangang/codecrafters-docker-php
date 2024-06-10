@@ -5,7 +5,7 @@
 while (ob_get_level() !== 0) {
   ob_end_clean();
 }
-echo "Logs from your program will appear here!\n";
+// echo "Logs from your program will appear here!\n";
 
 // Uncomment this to pass the first stage.
  $child_pid = pcntl_fork();
@@ -15,9 +15,9 @@ echo "Logs from your program will appear here!\n";
  elseif ($child_pid) {
    // We're in parent.
    pcntl_wait($status);
-   echo "Child terminates!";
+   // echo "Child terminates!";
  }
  else {
    // Replace current program with calling program.
-   echo exec(implode(' ', array_slice($argv, 3)));
+   echo exec(implode(' ', array_slice($argv, 3))) . PHP_EOL;
  }
